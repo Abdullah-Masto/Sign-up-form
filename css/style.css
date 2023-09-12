@@ -1,0 +1,98 @@
+:root {
+  --dark-blue: #1d2b3a;
+  --light-green: #92e3a9;
+  overflow-x: hidden;
+  font-family: "PT Sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .photo {
+  width: 100vw;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+}
+.form-container {
+  background-color: var(--dark-blue);
+  width: 100vw;
+  flex-grow: 0;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 110vh;
+  margin: 2rem 0;
+}
+.form-container form input {
+  background-color: transparent;
+  color: rgb(201, 190, 190);
+  padding: 1rem;
+  font-weight: 500;
+  border: none;
+  border-bottom: #222 solid 0.5px;
+  padding-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+  outline: none;
+}
+.form-container form input:empty:required:focus {
+  border: red solid 0.5px;
+}
+.form-container form input:required:valid {
+  border: var(--light-green) solid 0.5px;
+}
+.form-container form input:focus {
+  border: var(--light-green) solid 0.5px;
+}
+.form-container form input:invalid:focus {
+  border: red solid 0.5px;
+}
+.form-container form input:not(:required):not(:empty):valid {
+  border: var(--light-green) solid 0.5px;
+}
+
+.form-container form button {
+  padding: 0.6em;
+  font-weight: 600;
+  background-color: var(--light-green);
+  border-radius: 0.4rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+.form-container form button:hover {
+  background-color: var(--dark-blue);
+  color: white;
+  border: gray 0.5px solid;
+}
+.form-container p {
+  color: white;
+}
+.form-container p:first-child {
+  font-weight: 600;
+}
+.form-container .special-span {
+  color: var(--light-green);
+}
+@media (min-width: 700px) {
+  .container .photo {
+    width: 50vw;
+  }
+  .form-container {
+    width: 50vw;
+  }
+}
+@media (min-width: 800px) {
+  .container .photo {
+    width: 40vw;
+  }
+  .form-container {
+    width: 60vw;
+  }
+}

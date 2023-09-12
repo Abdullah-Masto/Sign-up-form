@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-up Form</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/noun-shop-6087792.svg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="photo">
+        <img src="images/21118603_6425299.svg" alt="" />
+      </div>
+      <div class="form-container">
+        <form action="" method="post">
+          <p>Get Started</p>
+          <div class="input-container">
+            <input
+              type="text"
+              required
+              placeholder="first-name"
+              name="first-name"
+              id="fist-name"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="text"
+              placeholder="last-name"
+              name="last-name"
+              id="last-name"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="email"
+              required
+              placeholder="email"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="tel"
+              pattern="(\+)?[0-9]+"
+              placeholder="phone"
+              name="phone"
+              id="phone"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              required
+              placeholder="password"
+              name="password"
+              id="password"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              required
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="confirm-password"
+            />
+          </div>
+          <div class="btn-container">
+            <button id="creat-btn" type="submit">Create Acount</button>
+          </div>
+          <p>
+            already have an acount...? <span class="special-span">log-in</span>
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
