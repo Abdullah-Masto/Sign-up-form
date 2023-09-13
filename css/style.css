@@ -14,6 +14,14 @@
   flex-grow: 0;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.creator {
+  color: #555;
+  font-size: 0.5rem;
+  position: absolute;
+  bottom: 0.5rem;
+  left: 40%;
 }
 .form-container {
   background-color: var(--dark-blue);
@@ -41,11 +49,8 @@
   border-radius: 0.3rem;
   outline: none;
 }
-.form-container form input:empty:required:focus {
+.form-container form input:invalid:required:focus {
   border: red solid 0.5px;
-}
-.form-container form input:required:valid {
-  border: var(--light-green) solid 0.5px;
 }
 .form-container form input:focus {
   border: var(--light-green) solid 0.5px;
@@ -53,8 +58,14 @@
 .form-container form input:invalid:focus {
   border: red solid 0.5px;
 }
-.form-container form input:not(:required):not(:empty):valid {
+.form-container form input:required:valid {
   border: var(--light-green) solid 0.5px;
+}
+.form-container form .input-container input.passed {
+  border: var(--light-green) solid 0.5px;
+}
+.form-container form .input-container input.not-passed {
+  border: red solid 0.5px;
 }
 
 .form-container form button {
@@ -80,6 +91,11 @@
 .form-container .special-span {
   color: var(--light-green);
 }
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 @media (min-width: 700px) {
   .container .photo {
     width: 50vw;
@@ -94,5 +110,15 @@
   }
   .form-container {
     width: 60vw;
+  }
+}
+@media (min-width: 1000px) {
+  .inputs {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .inputs {
+    gap: 4rem;
   }
 }
